@@ -18,9 +18,24 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "exclude": [
+      "node_modules",
+    ],
   },
   "include": [
-    "src"
-  ]
+    "src/components",
+    "src/pages",
+    "src/types",
+    "src/index.tsx",
+    "src/css",
+    "src/assets",
+    "src/router"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/mocks"
+  ],
+  "typeRoots" : ["node_modules/@types", "src/types"]
 }

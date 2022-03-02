@@ -1,0 +1,146 @@
+/* :root {
+	--yellow: #D9AE35;
+	--dark-bg: #14213D;
+	--dark-fg: #04151F;
+	--white: #fff;
+	--program-label: #11212B;
+	--bg-player: #11182B;
+	--ph-color: #7D6727;
+	--bg-program-desc: #1C204B;
+	--red: #e96161;
+	--telegram: #0088cc;
+	--header-bg: #132347;
+	--menu-bg: #132047;
+} */
+
+:root {
+	--yellow: #ffc107;
+	--dark-bg: #171a1c;
+	--dark-fg: #04151F;
+	--white: #fff;
+	--ph-color: #f8d676;
+	--bg-program-desc: #343a40;
+	--red: #e96161;
+	--telegram: #0088cc;
+	--menu-bg: #333;
+	--program-label: #ca9e1c;
+	--bg-player: #000;
+	--header-bg: #000;
+	--footer-bg: #000;
+
+
+
+
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: var(--white);
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	background: var(--dark-bg);
+	font-size: 18px;
+	overflow-x: hidden;
+}
+
+li, ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .5rem;
+}
+
+.App {
+	max-width: 1920px;
+	width: 100%;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 2rem;
+	padding-top: 8.5rem;
+}
+
+.scroll, html, body {
+	scroll-behavior: smooth;
+}
+
+.scroll::-webkit-scrollbar {
+  width: .65rem;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+
+.scroll::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+  border-radius: 128px;
+}
+
+
+.scroll::-webkit-scrollbar-thumb:hover {
+	border-left: 1px solid var(--white);
+	border-right: 1px solid var(--white);
+	background-color: var(--bg-program-desc);
+}
+
+.MuiBreadcrumbs-li a { font-size: 1.2rem; }
+
+.MuiBreadcrumbs-li a.bread-active { color: var(--yellow) }
+
+.MuiBreadcrumbs-li a:hover {
+	text-decoration: underline;
+	color: var(--yellow);
+}
+
+nav.MuiTypography-root.MuiTypography-body1.MuiBreadcrumbs-root.css-63vwl1-MuiTypography-root-MuiBreadcrumbs-root{
+	margin-bottom: 1rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.App {
+		padding: 10rem 0 0 0;
+	}
+}
+
+

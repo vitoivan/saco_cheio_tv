@@ -1,0 +1,76 @@
+[
+	{
+		"id": 1,
+		"title": "À Deriva Podcast",
+		"host": "Arthur Petry",
+		"banner": "https://www.sacocheio.tv/static/media/4100-banner.bd4126c8.jpg",
+		"description": "Arthur Petry entrevista pessoas extremamente interessantes enquanto luta contra sua loucura e esquizofrenia pra conseguir prestar atenção no que o convidado fala.",
+		"apresentation": "Arthur Petry entrevista pessoas extremamente interessantes enquanto luta contra sua loucura e esquizofrenia pra conseguir prestar atenção no que o convidado fala.",
+		"image": "https://www.sacocheio.tv/static/media/4100-capa.e9700406.jpg"
+	},
+	{
+		"id": 2,
+		"title": "Podcast Saco Cheio",
+		"host": "Arthur Petry",
+		"banner": "https://www.sacocheio.tv/static/media/1-banner.7320bd94.jpg",
+		"description": "O programa é para ouvintes que não procuram cultura, informação ou opiniões inteligentes. Durante uma hora e meia Arthur Petry reduz o mundo inteiro ao seu próprio umbigo, interpretando tudo de forma egoísta, ignorante e burra. Se você acha que existe certo e errado, tem convicções e opiniões sobre tudo, não dê play. O QI máximo para poder aproveitar esse podcast é 30.",
+		"apresentation": "O programa é para ouvintes que não procuram cultura, informação ou opiniões inteligentes.",
+		"image": "https://www.sacocheio.tv/static/media/1-capa.24a8c6c6.jpg",
+		"date": "Sextas-feiras"
+	},
+	{
+		"id": 3,
+		"title": "Cagando e Andando",
+		"host": "Tiago Carvalho",
+		"banner": "https://www.sacocheio.tv/static/media/3-banner.f1e2ab24.jpg",
+		"description": "Um programa PAUTADO nos sentimentos de arrependimento e ressentimento. Baseado apenas em intuições infantilizadas, Tiago Carvalho faz observações sobre a existência e explica minuciosamente como as coisas deveriam ser. Além disso, ele conta histórias de sua vida, muitas vezes desastrosas, causadas por medo, procrastinação e PREGUIÇA. Veja em ação o cérebro de alguém que não tem compromisso com rigorosamente nada e se orgulha e se arrepende disso ao mesmo tempo.",
+		"apresentation": "Tiago Carvalho faz observações sobre a existência e explica minuciosamente como as coisas deveriam ser.",
+		"image": "https://www.sacocheio.tv/static/media/3-capa.447d0f2e.jpg",
+		"date": "Quintas-Feiras"
+	},
+	{
+		"id": 4,
+		"title": "Petry feat. Beatriz",
+		"host": "Arthur Petry e Beatriz",
+		"banner": "https://www.sacocheio.tv/static/media/4099-banner.2bb6f86c.jpg",
+		"description": "Arthur Petry e Beatriz debatem sobre os mais diversos assuntos, em sua maioria sobre relacionamento.",
+		"apresentation": "Arthur Petry e Beatriz debatem sobre os mais diversos assuntos, em sua maioria sobre relacionamento",
+		"image": "https://www.sacocheio.tv/static/media/4099-capa.d0c9e544.jpg"
+	},
+	{
+		"id": 5,
+		"title": "Acervo Podcast Saco Cheio",
+		"host": "Produção: Mateus Oliveira",
+		"banner": "https://www.sacocheio.tv/static/media/3962-banner.4cb459ba.jpg",
+		"description": "Está com saudade de ouvir algum trecho antigo? Quer saber o que se passava em alguma data do passado? Aqui você encontra os melhores e piores momentos dos quase 8 anos de história do Podcast Saco Cheio",
+		"apresentation": "Aqui você encontra os melhores e piores momentos dos quase 8 anos de história do Podcast Saco Cheio.",
+		"image": "https://www.sacocheio.tv/static/media/3962-capa.42468873.jpg"
+	},
+	{
+		"id": 6,
+		"title": "Crypto Tigers",
+		"host": "Tiago Carvalho e Iago Giacomello",
+		"banner": "https://www.sacocheio.tv/static/media/5470-banner.ef51ac21.jpg",
+		"description": "Tiago Carvalho e Iago Giacomello trazem as novidades da semana no mundo das criptomoedas, além de contar as trapalhadas de jegues que perderam tudo, bem como sortudos que ficaram ricos da noite pro dia. Um podcast para ouvir ao acordar e ficar ligado nos INVESTIMENTOS.",
+		"apresentation": "Tiago Carvalho e Iago Giacomello trazem as novidades da semana no mundo das criptomoedas, além de contar as trapalhadas de jegues que perderam tudo.",
+		"image": "https://www.sacocheio.tv/static/media/5470-capa.5ea26c0b.jpg"
+	},
+	{
+		"id": 7,
+		"title": "Tarja Preta FM",
+		"host": "Arthur Petry, Bianca Rodrigues e Kaio D'Elaqua",
+		"banner": "https://www.sacocheio.tv/static/media/5849-banner.825cf74c.jpg",
+		"description": "Hater número 1 de podcasts no Brasil (incluindo os SEUS), Arthur Petry apresenta um novo formato de programa de humor, nos remetendo aos bons e velhos tempos de rádio dos anos 90. Com ligações para os ouvintes, trilha sonora feita pela audiência, participações especiais de GRANDES personagens e outros quadros, o Tarja Preta FM traz a nostalgia de uma época mais leve e despretensiosa.",
+		"apresentation": "Hater número 1 de podcasts no Brasil (incluindo os SEUS), Arthur Petry apresenta um novo formato de programa de humor, nos remetendo aos bons e velhos tempos de rádio dos anos 90",
+		"image": "https://www.sacocheio.tv/static/media/5849-capa.5f2ea7a6.jpg"
+	},
+	{
+		"id": 8,
+		"title": "Desinformação",
+		"host": "Arthur Petry e Tiago Carvalho",
+		"banner": "https://www.sacocheio.tv/static/media/4-banner.018f704b.jpg",
+		"description": "Os dois maiores ignorantes deste país, Arthur Petry e Tiago Carvalho, tentam entender as notícias da semana baseados em opiniões estritamente retiradas do CU de ambos. Se você também não entende nada, sente sono em ouvir as palavras reforma da previdência educação saúde problemas sociais e outras abobrinhas e sente ódio por pessoas inteligentes, dê play e consuma o pior conteúdo já criado na história da internet.",
+		"apresentation": "Os dois maiores ignorantes deste país, Arthur Petry e Tiago Carvalho, tentam entender as notícias da semana baseados em opiniões estritamente retiradas do CU de ambos.",
+		"image": "https://www.sacocheio.tv/static/media/bannerDesinformacao.727f1432.svg"
+	}
+]
