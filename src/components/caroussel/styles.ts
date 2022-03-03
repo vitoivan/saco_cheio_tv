@@ -6,18 +6,20 @@ export const Container = styled.div`
 	margin: 0 auto;
 	width: 90%;
 	height: fit-content;
-	max-width: 1600px;
+	max-width: 1280px;
+	
 
 	.carousel .slider-wrapper {
-		border: 1px solid var(--white) !important;
+		border: 1px solid var(--yellow) !important;
+		
 	}
 	.carousel .slide img {
 		width: 100vw;
-		max-width: 1600px;
+		max-width: 1280px;
 		height: 700px;
 		user-select: none;
 	}
-	.carousel { position: relative; z-index: 2; }
+	.carousel { position: relative; z-index: 2;}
 
 	.control-dots li{
 		background: var(--yellow) !important;
@@ -28,6 +30,14 @@ export const Container = styled.div`
 	.thumb img, .thumb {
 		width: 80px !important;
 		height: 49px !important;
+		border-color: var(--yellow);
+
+		.selected {
+			border-color: var(--white) !important;
+		}
+	}
+	.carousel .thumb.selected, .carousel .thumb:hover {
+		border-color: var(--white) !important;
 	}
 
 	.carousel:hover .podcast-data {
@@ -68,16 +78,17 @@ export const Container = styled.div`
 			letter-spacing: .2rem;
 			line-height: 1.8rem;
 			text-align: left;
+			color: #fff;
 		}
 
 		.watch {
-			background: var(--yellow);
-			padding: 1rem 2rem;
-			border-radius: 12px;
+			background: var(--yellow-btn);
+			padding: 1rem 1.5rem;
 			position: absolute;
 			bottom: 2rem;
+			font-size: 1.3rem;
 			right: 4rem;
-			font-weight: 800;
+			font-weight: 400;
 			letter-spacing: .4rem;
 			filter: brightness(1);
 			transition: all .3s;
@@ -86,7 +97,7 @@ export const Container = styled.div`
 		}
 	}
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 1365px) {
 		width: 100vw;
 		margin: 0;
 		max-height: 60vh;
@@ -98,6 +109,44 @@ export const Container = styled.div`
 			border: none !important;
 			border-top: 1px solid var(--white) !important;
 			border-bottom: 1px solid var(--white) !important;
+		}
+
+
+		.podcast-data { 
+
+			padding: 1rem;
+
+			p {
+				font-size: .8rem;
+				line-height: normal;
+			}
+
+			.watch {
+				font-size: .9rem;
+				right: 2rem;
+				bottom: 3rem;
+				padding: .7rem 1rem;
+				font-weight: bold;
+				letter-spacing: .2rem;
+			}
+
+			h2 {
+				letter-spacing: .2rem;
+				font-size: 1.2rem;
+			}
+
+			strong {
+				margin: .5rem 0;
+				font-size: .9rem;
+			}
+			
+			.host {
+				font-size: 1rem;
+				letter-spacing: .1rem;
+				text-align: center;
+				width: 100%;
+			}
+
 		}
 	}
 `; 

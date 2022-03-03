@@ -12,5 +12,9 @@ export const Container = styled.header`
 	padding: 1rem 3rem 1rem 3rem;
 	z-index: 999;
 	background: var(--header-bg);
-	box-shadow: 2px 0px 17px -4px #000;
+
+	@media only screen and (max-width: 1365px) {
+		justify-content: space-between;
+		padding: 1rem;
+	}
 `;

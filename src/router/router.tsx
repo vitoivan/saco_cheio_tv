@@ -4,6 +4,7 @@ import { Home } from '../pages/home';
 import { Program } from '../pages/podcast';
 import { VideoScreenPage } from '../pages/video-screen';
 import { SupportPageComponent } from '../pages/support';
+import { WindowProvider } from '../providers/windowProvider'
 
 
 const SrollToTop = ({ children }) => {
@@ -39,12 +40,14 @@ export const RouterComponent = () => {
   return (
     <PreventScroll>
       <SrollToTop>
-        <Routes>
-          <Route path='/support' element={<SupportPageComponent />}/>
-          <Route path='/podcast/:podcastId' element={<Program />}/>
-          <Route path='/episode/:episodeId' element={<VideoScreenPage />}/>
-          <Route path='*' element={<Home />}/>
-        </Routes>
+        <WindowProvider>
+          <Routes>
+              <Route path='/support' element={<SupportPageComponent />}/>
+              <Route path='/podcast/:podcastId' element={<Program />}/>
+              <Route path='/episode/:episodeId' element={<VideoScreenPage />}/>
+              <Route path='*' element={<Home />}/>
+          </Routes>
+        </WindowProvider>
       </SrollToTop>
     </PreventScroll>
   )

@@ -11,6 +11,7 @@ import { BsYoutube as Youtube } from 'react-icons/bs';
 import { FaTelegramPlane as Telegram } from 'react-icons/fa';
 import { IoHelpCircle as About } from 'react-icons/io5';
 import { FaUserAlt as User } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export interface IMenuOpennedComponentProps {
 	openned: boolean,
@@ -30,8 +31,8 @@ export const MenuOppennedComponent = ({ openned, setOpenned }: IMenuOpennedCompo
 		</Header>
 		<Body>
 			<ul>
-				<li> <a href='#'><User />  <span>Minha Conta</span></a> </li>
-				<li> <a href='#'><About />  <span>Sobre</span></a> </li>
+				<li> <Link to='/'><User />  <span>Home</span></Link> </li>
+				<li> <Link to='/support'><About />  <span>Vire um apoiador</span></Link> </li>
 			</ul>
 		</Body>
 		<Footer> 

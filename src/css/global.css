@@ -1,62 +1,26 @@
-/* :root {
-	--yellow: #D9AE35;
-	--dark-bg: #14213D;
-	--dark-fg: #04151F;
-	--white: #fff;
-	--program-label: #11212B;
-	--bg-player: #11182B;
-	--ph-color: #7D6727;
-	--bg-program-desc: #1C204B;
-	--red: #e96161;
-	--telegram: #0088cc;
-	--header-bg: #132347;
-	--menu-bg: #132047;
-} */
-
 :root {
-	--yellow: #ffc107;
-	--dark-bg: #171a1c;
+	--yellow: #ecb724 ;
+	--yellow-btn: #ecb724 ;
 	--dark-fg: #04151F;
 	--white: #fff;
 	--ph-color: #f8d676;
-	--bg-program-desc: #343a40;
+	--bg-program-desc: #3b3b3b;
 	--red: #e96161;
 	--telegram: #0088cc;
-	--menu-bg: #333;
-	--program-label: #ca9e1c;
-	--bg-player: #000;
+	--program-label: #ecb724d2;
+	--bg-player: #0b1221;
+	--our-date: #f0f0f0;
+	--dark-bg: #1b1e1f;
+	--bg-header-episodes: rgba(0,0,0);
+	--menu-bg: #121212;
+	--header-bg: rgba(24, 26, 27, 0.98);
+	--footer-bg: rgba(24, 26, 27, 0.98);
+	
+
 	--header-bg: #000;
+	--menu-bg: #000;
 	--footer-bg: #000;
 
-
-
-
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
 }
 
 * {
@@ -91,6 +55,7 @@ button {
 
 .App {
 	max-width: 1920px;
+	height: 1080;
 	width: 100%;
 	min-height: 100vh;
 	margin: 0 auto;
@@ -139,7 +104,7 @@ nav.MuiTypography-root.MuiTypography-body1.MuiBreadcrumbs-root.css-63vwl1-MuiTyp
 
 @media only screen and (max-width: 768px) {
 	.App {
-		padding: 10rem 0 0 0;
+		padding: 7rem 0 0 0;
 	}
 }
 

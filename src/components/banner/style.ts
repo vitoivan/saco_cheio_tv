@@ -5,7 +5,7 @@ export const Container  = styled.div`
 	margin: 2rem auto;
 	width: 90%;
 	height: 40vw;
-	max-width: 1800px;
+	max-width: 1700px;
 	max-height: 800px;
 	position: relative;
 	border: 1px dotted var(--yellow);
@@ -57,4 +57,44 @@ export const Container  = styled.div`
 		}
 	}
 
+	@media only screen and (max-width: 1365px) {
+
+
+		width: 90%;
+		margin: 2rem auto;
+		border: 1px dotted var(--yellow);
+		height: 400px;
+		
+		img {
+			width: 100%;
+			height: 100%;
+			user-select: none;
+		}
+
+		.podcast-description {
+			padding: .5rem;
+			padding: 2rem 1rem;
+
+			
+			h2 {
+				text-align: center;
+				font-size: 1rem;
+			}
+			strong {
+				font-size: .9rem;
+				letter-spacing: .15rem;
+				margin: 0;
+				line-height: 1.5rem;
+			}
+			.host {
+				font-size: .9rem;
+			}
+
+			p {
+				font-size: .9rem;
+				letter-spacing: .1rem;
+				line-height: 1rem;
+			}
+		}
+	}
 `;

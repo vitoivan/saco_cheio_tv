@@ -31,6 +31,11 @@ const Container = styled(Link)`
 	&:hover {
 		filter: brightness(1.3);
 	}
+
+	@media only screen and (max-width: 1365px) {
+		width: 7rem;
+		height: 3.25rem;
+	}
 `;
 
 export const LogoComponent = () => {

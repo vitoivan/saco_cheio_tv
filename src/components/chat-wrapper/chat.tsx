@@ -9,12 +9,6 @@ interface IProps {
 	comment : Comments;
 }
 
-interface ILineData {
-	lineHeight: number,
-	lineCount: number,
-	height: number;
-}
-
 
 
 const responses = [
@@ -67,20 +61,34 @@ const Container = styled.div`
 		}
 	}
 
-	.responses {
-		max-width: 100%;
+	@media only screen and (max-width: 1365px) {
+
+		.responses {
+			max-width: 100%;
+			> li {
+				position: relative;
+				top: -35px;
+				margin-left: 1rem;
+			}
+
+		.show-responses {
+			left: 1.5rem;
+			bottom: 2.65rem;
+			font-size: 0.8rem;
+		}
+	
 	}	
-
-
+	}
 `
 
 export const ChatComponent = ({ comment: cmt }: IProps) => {
 	
 	const [showResponse, setShowResponse] = React.useState(false);
+
 	return (
 		<Container>
-			<Chat comment={cmt}/>
-			<div className="responses">
+			<Chat comment={cmt} />
+			<div className={`responses`}>
 				<span 
 					className='show-responses' 
 					onClick={() => setShowResponse(!showResponse)}>

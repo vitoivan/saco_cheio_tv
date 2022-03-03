@@ -15,21 +15,23 @@ interface IVideoPlayerProps {
 const StorageKeyVolume = "@sacocheio-volume";
 const StorageKeyVideo = "@sacocheio-video";
 const SECONDS_IN_IDLE = 4;
-const videoPATH = "/assets/NLW Heat - Expanse  - Stage 01.mp4";
+
+/*🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥       WELCOME TO THE HELL     🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥*/
 
 export const VideoPlayer = ({ data }: IVideoPlayerProps ) => {
 
 	const defaultVol = localStorage.getItem(StorageKeyVolume);
 	const defaultOldCurrentTime = localStorage.getItem(StorageKeyVideo + `-${data.episode.id}`)
 	
-	const [playing, setPlaying] = React.useState(false);
-	const [vol, setVol] = React.useState<number>(JSON.parse(defaultVol || "0.5"))
-	const [counter, setCounter] = React.useState<number>(SECONDS_IN_IDLE);
+	const [playing, setPlaying] = React.useState<boolean>(false);
 	const [canCount, setCanCount] = React.useState<boolean>(true);
 	const [videoLoading, setVideoLoading] = React.useState<boolean>(false);
 	const [videoError, setVideoError] = React.useState<boolean>(false);
-	const [oldCurrentTime, setOldCurrentTime] = React.useState<number>(parseInt(defaultOldCurrentTime || '0'));
+	const [counter, setCounter] = React.useState<number>(SECONDS_IN_IDLE);
 
+	const [oldCurrentTime, setOldCurrentTime] = React.useState<number>(parseInt(defaultOldCurrentTime || '0'));
+	const [vol, setVol] = React.useState<number>(JSON.parse(defaultVol || "0.5"))
+	
 	const { setVideo, video }: IVideoProvider = useVideo();
 
 	const location = useLocation();
@@ -38,33 +40,37 @@ export const VideoPlayer = ({ data }: IVideoPlayerProps ) => {
 
 		const videoHTML = getVideoComponent();
 		setVideo(videoHTML);
-		videoHTML.src = data.episode.episodeUrl;
 		videoHTML.onplay = () => { setPlaying(true); setVideoLoading(false) };
 		videoHTML.oncanplay = () => { setVideoLoading(false) }
 		videoHTML.onpause = () => setPlaying(false);
 		videoHTML.ontimeupdate = () => updateProgressBar();
 		videoHTML.onerror = () => setVideoError(true);
-		videoHTML.volume = vol;
-		videoHTML.currentTime = oldCurrentTime;
+		videoHTML.onwaiting = () => setVideoLoading(true);
 		videoHTML.onvolumechange = () => {
 			localStorage.setItem(StorageKeyVolume, JSON.stringify(videoHTML.volume));
 			setVol(videoHTML.volume)
 		};
 
-		const wrapper = document.getElementById('videoContainer');
-		wrapper?.addEventListener('dblclick', function (e: React.MouseEvent<HTMLDivElement> | any) {
+		videoHTML.src = data.episode.episodeUrl;
+		videoHTML.volume = vol;
+		videoHTML.currentTime = oldCurrentTime;
 
-			if (e?.target?.classList?.contains('videoContainer') || e?.target?.classList?.contains('video')) {
+
+		const wrapper = document.getElementById('videoContainer');
+		
+		wrapper && (wrapper.onclick = (e: React.MouseEvent<HTMLDivElement> | any) => {
+			if (e?.target?.classList?.contains('videoContainer') || e?.target?.classList?.contains('video'))
+				videoHTML.paused ? videoHTML.play() : videoHTML.pause()
+		})
+
+		wrapper?.addEventListener('dblclick', function (e: React.MouseEvent<HTMLDivElement> | any) {
+			if (e?.target?.classList?.contains('videoContainer') || e?.target?.classList?.contains('video'))
 				toggleFullScreen('videoContainer');
-			}
 		});
+
 		wrapper?.addEventListener('keydown', handleKeyDown);
 		wrapper?.addEventListener('mouseleave', handleMouseLeave);
 		wrapper?.addEventListener('mousemove', handleMouseMove);
-
-		videoHTML.onwaiting = () => {
-			setVideoLoading(true);
-		}
 
 		function handleKeyDown(e: React.KeyboardEvent | any) {
 
@@ -74,23 +80,18 @@ export const VideoPlayer = ({ data }: IVideoPlayerProps ) => {
 			(e.code === "ArrowLeft") && (videoHTML.currentTime -= 15);
 
 			if (e.code === "ArrowUp") {
-				videoHTML.volume <= 0.9 &&(videoHTML.volume += 0.1);
-
-				if (videoHTML.volume <= 1 && videoHTML.volume > 0.9) {
+				videoHTML.volume <= 0.9 && (videoHTML.volume += 0.05);
+				if (videoHTML.volume <= 1 && videoHTML.volume > 0.9)
 					videoHTML.volume = 1;
-				}
 			}
 			if (e.code === "ArrowDown") {
-				videoHTML.volume >= 0.1 && (videoHTML.volume -= 0.1);
-				
-				if (videoHTML.volume < 0.1 && videoHTML.volume >= 0) {
+				videoHTML.volume >= 0.1 && (videoHTML.volume -= 0.05);
+				if (videoHTML.volume < 0.1 && videoHTML.volume >= 0)
 					videoHTML.volume = 0;
-				}
 			}
 		}
 		
-			
-		const interval = setInterval(() => {
+		const hoverInterval = setInterval(() => {
 			setCanCount(cancount => {
 				setCounter(state => {
 					if (state < SECONDS_IN_IDLE && cancount) {
@@ -114,8 +115,7 @@ export const VideoPlayer = ({ data }: IVideoPlayerProps ) => {
 			setCounter(SECONDS_IN_IDLE);
 		}
 		
-		
-		return () => { document.removeEventListener('keydown', handleKeyDown); clearInterval(interval) }
+		return () => { clearInterval(hoverInterval) }
 	},[location])
 
 	const updateProgressBar = () => {

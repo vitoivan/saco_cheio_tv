@@ -48,6 +48,19 @@ const Container = styled.footer`
 		letter-spacing: .2rem;
 		line-height: 2rem;
 	}
+
+	@media only screen and (max-width: 1365px) {
+		p {
+			font-size: .8rem;
+			letter-spacing: .1rem;
+		}
+
+
+		.links a {
+			font-size: 1rem;
+			letter-spacing: .1rem;
+		}
+	}
 `;
 
 export const FooterComponent = () => {
@@ -56,7 +69,8 @@ export const FooterComponent = () => {
 
 		<div className="wrapper">
 			<div className="links">
-				<a href={"/assets/Privacy_Policy_SacoCheioTV.pdf"} target="_blank">Privacidade</a>
+				<a href={"/assets/Privacy_Policy_SacoCheioTV.pdf"} target="_blank" rel='noreferrer'>Privacidade</a>
+				{/* eslint-disable-next-line */}
 				<a href={"#"}>< FaChevronUp /></a>
 				<a href="/assets/Use_Terms_SacoCheioTV.pdf" target="_blank">Termos</a>
 			</div>

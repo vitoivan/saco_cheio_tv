@@ -28,6 +28,7 @@ export const Container = styled.li`
 		letter-spacing: .2rem;
 		color: var(--yellow);
 		margin: 0 0 .5rem 0;
+		font-weight: 400;
 
 		.date {
 			color: var(--yellow);
@@ -121,7 +122,6 @@ export const Container = styled.li`
 	.see-btn {
 		color: var(--yellow);
 		font-weight: 400;
-		font-size: 1rem;
 		cursor: pointer;
 
 		&:hover {
@@ -129,6 +129,58 @@ export const Container = styled.li`
 		}
 	}
 	
+
+	@media only screen and (max-width: 1365px) {
+		
+		width: 100%;
+		gap: 1rem;
+		margin-top: 0;
+		
+		.content .author {
+			font-size: 1rem;
+			letter-spacing: .1rem;
+		}
+
+		.content .comment {
+			font-size: .9rem;
+			line-height: 1rem;
+		}
+
+		.content .date {
+			font-size: .8rem;
+			letter-spacing: 0;
+		}
+
+		.see-btn {
+			font-size: .8rem;
+		}
+
+		.answer {
+			letter-spacing: .1rem;
+			font-weight: 500;
+			font-size: .8rem;
+		}
+		.comment {
+			font-weight: 300;
+			font-size: 1.1rem;
+		}
+		.see-btn {
+			font-size: 1rem;
+		}
+
+		.author .date {
+			font-weight: 400;
+		}
+
+		&:nth-child(1) {
+			margin-top: 0rem;
+		}
+
+		.response button {
+			font-size: .9rem;
+			letter-spacing: 0;
+		}
+	}
 `;
 
 

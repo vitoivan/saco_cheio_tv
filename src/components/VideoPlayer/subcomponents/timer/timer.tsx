@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import { useVideo } from '../../../../providers/video-provider';
 import { getVideoComponent } from '../../helpers';
 
-
 const TimerStyled = styled.div`
-
 	height: fit-content;
 	span {
 		font-size: .9rem;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MenuOpennedContainer = styled.nav`
 	background: var(--menu-bg);
-	width: 30rem;
+	width: 100%;
 	height: 100vh;
 	position: fixed;
 	z-index: 999;
@@ -12,7 +12,6 @@ export const MenuOpennedContainer = styled.nav`
 	transition: all .5s;
 	transform: translateX(110%);
 	transform-origin: right;
-	box-shadow: 0 0px 25px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 	&.open {
 		transition: all .5s;
@@ -62,6 +61,18 @@ export const MenuOpennedHeader = styled.div`
 		color: var(--white);
 	}
 
+	@media only screen and (max-width: 1365px) { 
+
+		padding: 0 1rem;
+		
+		.contacts {
+			gap: 0;
+			svg {
+				font-size: 1.5rem;
+			}
+		}
+
+	}
 `;
 
 export const MenuOpennedBody = styled.section`
@@ -103,6 +114,28 @@ export const MenuOpennedBody = styled.section`
 	ul li:hover{
 		svg path { color: var(--yellow); transition: all .3s; }
 		span { color: var(--yellow); transition: all .3s; }
+	}
+
+	@media only screen and (max-width: 1365px) {
+		ul li {
+			svg, span {
+
+				font-size: 1rem;
+			}
+			span {
+				margin-left: 0.5rem;
+			}
+		}
+	}
+
+
+	@media only screen and (max-width: 400px) {
+		ul li {
+			svg, span {
+
+				font-size: .9rem;
+			}
+		}
 	}
 `;
 

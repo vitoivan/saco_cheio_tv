@@ -20,7 +20,7 @@ export const ProgramCardComponent = ({
 		</Link>
 		<label htmlFor="img-container">
 			<h3>{podcast.title}</h3>
-			{ podcast.date ?  <span>{podcast.date}</span> : ""}
+			{ podcast.date ?  <span className='date'>{podcast.date}</span> : ""}
 		</label>
 	</Container>
   )

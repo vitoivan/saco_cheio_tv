@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  app:
+    build:
+      context: "./"
+      dockerfile: "${DOCKER_FILE}"
+    container_name: kddw-front
+    restart: always
+    volumes:
+      - ./:/app
+    ports:
+      - 3000:${CONTAINER_PORT}

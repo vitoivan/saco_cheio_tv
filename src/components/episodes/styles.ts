@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
 	
 	margin: 1rem auto 0 auto;
-	max-width: 1700px;
-	width: 80%;
+	max-width: 1800px;
+	width: 90%;
 	position: relative;
 
 	.header {
@@ -12,7 +12,7 @@ export const Container = styled.div`
 		display: flex;
 		gap: 2em;
 		padding: 1rem;
-		background: var(--bg-player);
+		background: var(--bg-header-episodes);
 		box-shadow: 3px 7px 15px -6px #000;
 		cursor: pointer;
 		position: relative;
@@ -85,6 +85,8 @@ export const Container = styled.div`
 			width: 80%;
 			margin: 1rem 0 0 2rem;
 			float: left;
+			font-size: 1.2rem;
+			font-weight: 400;
 		}
 	}
 
@@ -95,10 +97,9 @@ export const Container = styled.div`
 		float: right;
 		background: var(--yellow);
 		padding: .5rem 1rem;
-		border-radius: 12px;
-		font-weight: 900;
+		font-weight: 400;
 		transition: all .3s;
-		font-size: 1rem;
+		font-size: 1.2rem;
 		filter: brightness(.9);
 
 		&:hover {
@@ -107,4 +108,43 @@ export const Container = styled.div`
 		}
 	}
 
+	@media only screen and (max-width: 1365px) {
+		.header {
+			img {
+				width: 70px;
+				height: 70px;
+			}
+
+			.content {
+				h3 {
+					font-size: .9rem;
+					letter-spacing: 0rem;
+				}
+
+				time {
+					font-size: .8rem;
+					letter-spacing: 0;
+				}
+			}
+			.arrow {
+				right: 1rem;
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+		}
+
+		.description {
+			
+			p {
+				font-size: 1rem;
+				line-height: 1.7rem;
+			}
+
+			.watch {
+				padding: .5rem;
+				font-size: 1rem;
+				font-weight: bold;	
+			}
+		}
+	}
 `;

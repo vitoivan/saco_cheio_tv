@@ -1,4 +1,3 @@
-import { debug } from 'console';
 import React from 'react'
 import { useLocation, useParams } from 'react-router-dom';
 import styled from 'styled-components';
@@ -15,17 +14,26 @@ interface EpisodesWrapperProps {
 const Container = styled.div`
 	h1, h2 {
 		text-align: start;
-		max-width: 1700px;
-		width: 80%;
-		letter-spacing: 1rem;
+		max-width: 1800px;
+		width: 90%;
+		letter-spacing: .5rem;
 		margin: 1rem auto;
 		color: var(--yellow);
-		font-size: 2rem;
+		font-size: 1.3rem;
 		font-weight: 400;
+		
 	}
 
-	h1 { margin-top: 3rem; }
-	h2 { margin-top: 4rem; font-size: 1.5rem; }
+	h1 { margin-top: 2rem; }
+	h2 { margin-top: 2rem; font-size: 1.5rem; }
+
+	@media only screen and (max-width: 1365px) {
+		h1, h2 {
+			font-size: 1rem;
+			text-align: center;
+			margin: 1rem auto;
+		}
+	}
 `;
 
 export const EpisodesWrapper = ({ podcast }: EpisodesWrapperProps) => {
@@ -44,6 +52,7 @@ export const EpisodesWrapper = ({ podcast }: EpisodesWrapperProps) => {
 		  sessionStorage.setItem('@saco-cheio-episodes', JSON.stringify(eps)) 
 		}
 		return eps;
+		// eslint-disable-next-line
 		}, [location])
 
 

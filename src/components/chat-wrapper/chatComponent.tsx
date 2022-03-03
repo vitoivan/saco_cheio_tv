@@ -5,6 +5,7 @@ import { Container, StyledInput } from './styles'
 interface IProps {
 	comment : Comments;
 	isResponse?: boolean;
+	showResponse?: boolean;
 }
 
 export const Chat = ({ comment: cmt, isResponse = false }: IProps) => {
@@ -19,8 +20,6 @@ export const Chat = ({ comment: cmt, isResponse = false }: IProps) => {
 
 	const submitResponse = (e: React.FormEvent) => {
 		e.preventDefault();
-
-		console.log(response);
 		setResponse("");
 		setRespOpenned(false);
 	}

@@ -10,10 +10,10 @@ export const Container = styled.section`
   h2 {
     text-align: center;
     font-size: 2rem;
-    letter-spacing: 1rem;
     color: var(--yellow);
-    margin: 5rem 0 5rem 1rem;
-    font-weight: 300;
+    margin: 6rem 0 3rem 1rem;
+		letter-spacing: .8rem;
+		font-weight: 300;
   }
 
   .container {
@@ -34,7 +34,7 @@ export const Container = styled.section`
       height: 35vw;
       max-width: 500px;
       max-height: 500px;
-      border: 1px solid var(--white);
+      border: 1px solid var(--yellow);
       filter: brightness(.8); 
       transition: all .3s;
 
@@ -46,6 +46,7 @@ export const Container = styled.section`
 
     .container p {
       letter-spacing: .1rem;
+      text-align: center;
     }
   }
   @media only screen and (max-width: 1150px) {

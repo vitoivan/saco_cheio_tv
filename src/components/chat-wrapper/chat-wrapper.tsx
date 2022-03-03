@@ -6,23 +6,47 @@ import { ChatComponent } from './chat'
 
 const Container = styled.div`
 	
-	width: 80%;
+	width: 95%;
 	height: fit-content;
 	max-height: 100vh;
 	overflow: auto;
 	padding-right: 3rem;
-	margin-top: 5rem;
+	overflow-x: hidden;
 
 	.comments-empty {
 		color: var(--yellow);
 		letter-spacing: .3rem;
+		margin: 0;
 	}
 	.responses li {
 		width: 100%;
 		transform: scale(.9);
 		margin-top: 0rem;
 		margin-left: 3rem;
-	}`
+
+		p {
+			font-size: 1.1rem;
+		}
+
+		.date {
+			font-size: .96rem;
+		}
+	}
+
+	h2 {
+		font-size: 1.3rem;
+		letter-spacing: .3rem;
+		color: var(--yellow);
+	}
+
+	@media only screen and (max-width: 1365px) {
+		padding-right: 0;
+
+		.comments-empty {
+			margin: 0 0 0 2rem;
+		}
+	}
+`
 
 
 interface ChatWrapperProps {
@@ -35,6 +59,7 @@ export const ChatWrapperComponent = ({ data }: ChatWrapperProps) => {
 
 
 	return (
+		<>
 		<Container className='scroll'>
 			<ul>
 			{
@@ -52,6 +77,7 @@ export const ChatWrapperComponent = ({ data }: ChatWrapperProps) => {
 			
 			}
 			</ul>
-	</Container>
+		</Container>
+		</>
   )
 }

@@ -4,15 +4,19 @@ import "../../../node_modules/react-responsive-carousel/lib/styles/carousel.min.
 import { Container } from './styles';
 import { Link } from 'react-router-dom';
 import { memoryDB } from '../../mocks/repositores/in-memory-database';
+import { useWindow } from '../../providers/windowProvider';
 
 
 export const CarousselComponent = () => {
+
+	const { windowWidth } = useWindow();
+
   return (
 	<Container>
-		<Carousel autoPlay	interval={3000} showArrows={false} infiniteLoop swipeable showStatus={false} showThumbs>
+		<Carousel autoPlay	interval={3000} showArrows={false} infiniteLoop swipeable showStatus={false} showThumbs={windowWidth > 1365 ? true : false}>
 			{ memoryDB.podcasts.map((podcast, i) => {
 				return <React.Fragment key={i}>
-					<img src={podcast.banner} key={i} />
+					<img src={podcast.banner} key={i} alt="banner" />
 
 					<div className="podcast-data">
 						<h2>{ podcast.title }</h2>

@@ -1,16 +1,14 @@
 import React from 'react';
 import { HeaderComponent } from '../components/header/header';
 import { BannerComponent } from '../components/banner/baner';
-import { EpisodeComponent } from '../components/episodes/episodes';
 import { memoryDB } from '../mocks/repositores/in-memory-database';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { Podcast } from '../mocks/entities/Podcast';
-import { Episodes } from '../mocks/entities/Episodes';
 import { FooterComponent } from '../components/footer/footer';
 import { EpisodesWrapper } from '../components/EpisodesWrapper/indes';
-import { Breadcrumbs } from '@mui/material';
 import styled from 'styled-components';
 import BreadCrumbComponent from '../components/breadcrumb';
+import { useWindow } from '../providers/windowProvider';
 
 
 const Container = styled.div`
@@ -22,10 +20,11 @@ const Container = styled.div`
   }
 `;
 
-
 export const Program = () => {
 
   const { podcastId: id } = useParams();
+  const { windowWidth } = useWindow();
+
   const location = useLocation();
 
   const podcast = React.useMemo(() => {
@@ -37,6 +36,7 @@ export const Program = () => {
       sessionStorage.setItem('@saco-cheio-podcasts', JSON.stringify(podcast)) 
     }
     return podcast;
+    // eslint-disable-next-line
     }, [location])
 
   return (
@@ -46,7 +46,9 @@ export const Program = () => {
             <Link to={`/`}>Home</Link>
             <Link to={`/podcast/${podcast?.id}`} className='bread-active' >{podcast?.title}</Link>
         </BreadCrumbComponent>
-        <BannerComponent podcast={podcast as Podcast} />
+        {
+          windowWidth > 1365  && <BannerComponent podcast={podcast as Podcast} />
+        }
         <EpisodesWrapper podcast={podcast as Podcast}/>
         <FooterComponent />
     </Container>

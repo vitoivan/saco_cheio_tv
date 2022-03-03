@@ -9,6 +9,8 @@ interface StyledProps {
 export const Container = styled.div<StyledProps>`
 	
 	position: relative;
+
+	
 	video {
 		display: block;
 		width: 100%;
@@ -52,8 +54,9 @@ export const Container = styled.div<StyledProps>`
 		outline: none;
 		user-select: none;
 		display: block;
+		border: 1px solid var(--yellow);
 
-		&.is-video { background: #000; }
+		&.is-video { background: var(--dark-bg); }
 		
 		&.is-audio::after {
 			content: "Esse episódio não possui vídeo";
@@ -83,6 +86,7 @@ export const Container = styled.div<StyledProps>`
 		}		
 		&.not-hovered {
 			cursor: none;
+			border: none;
 		}
 	}
 
@@ -112,6 +116,39 @@ export const Container = styled.div<StyledProps>`
 			0% { transform: scale(1.5) }
 			50% { transform: scale(1.7) }
 			100% { transform: scale(1.5) }
+		}
+	}
+
+	@media only screen and (max-width: 1665px) and (min-width: 1366px) {
+
+		&, .videoContainer {
+			width: 1024px;
+			height: 600px;
+		}
+
+		.videoContainer {
+		
+			text-align: center;
+
+			&.is-audio::after {
+				font-size: 1.3rem;
+				letter-spacing: .1rem;
+			}
+		}
+	}
+
+
+	@media only screen and (max-width: 900px) {
+
+		.videoContainer {
+			width: 100%;
+			height: 40vh;
+			text-align: center;
+
+			&.is-audio::after {
+				font-size: 1.3rem;
+				letter-spacing: .1rem;
+			}
 		}
 	}
 `;

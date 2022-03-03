@@ -19,8 +19,8 @@ export const ControlsContainer = styled.div`
 	opacity: 1;
 	max-width: 1350px;
 	z-index: 3;
-	background: #000;
-	padding: 1rem 1.5rem;
+	background: var(--header-bg);
+	padding: 1rem 2rem;
 
 
 	svg:hover { path { filter: brightness(1.2); }}
@@ -69,7 +69,42 @@ export const ControlsContainer = styled.div`
 			height: 12px;
 		}
 	}
+	
+	
+	@media only screen and (max-width: 768px) {
 
 
+		width: 100%;
+		padding: 1rem 0;
+		gap: .5rem;
+		bottom: 0;
 
+		svg {
+			margin: 0 .2rem; 
+			width: 1rem; 
+			height: 1rem;
+		}
+	
+
+		.play-pause-container {
+			svg:nth-child(2) {
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+			svg {
+				width: 1rem; 
+				height: 1rem;
+			}
+		}
+
+		.full-screen {
+			width: 1.5rem;
+			height: 1.5rem;
+			margin-right: 1rem;
+		}
+		.video-time span, .video-time{
+			font-size: .6rem;
+			letter-spacing: 0;
+		}
+	}
 `
