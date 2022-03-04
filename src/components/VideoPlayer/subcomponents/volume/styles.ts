@@ -14,6 +14,11 @@ export const VolumeContainer = styled.div<IVolComponent>`
 		transform: translateX(-50%) scaleY(1);
 		transition: all 300ms;
 	}
+
+	.sound-popover.active {
+		transform: translateX(-50%) scaleY(1);
+		transition: all 300ms;
+	}
 	
 	.sound-popover {
 		position: absolute;
