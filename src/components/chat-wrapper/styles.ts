@@ -8,6 +8,7 @@ export const Container = styled.li`
 	margin-top: 2rem;
 	width: 95%;
 	padding: 1rem;
+	border-top: 1px solid #fff5;
 
 	&:nth-child(1) {
 		margin-top: 2rem;
@@ -180,6 +181,22 @@ export const Container = styled.li`
 			font-size: .9rem;
 			letter-spacing: 0;
 		}
+	}
+	
+
+	@media only screen and (max-width: 768px) {
+
+		.answer {
+			margin: 0;
+			padding: 1rem 0;
+		}
+
+		.response {
+			transform: translateX(-75px);
+			margin-bottom: 2rem;
+			width: calc(100% + 60px);
+		}
+
 	}
 `;
 

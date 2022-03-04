@@ -106,6 +106,19 @@ nav.MuiTypography-root.MuiTypography-body1.MuiBreadcrumbs-root.css-63vwl1-MuiTyp
 	.App {
 		padding: 7rem 0 0 0;
 	}
+
+	.scroll::-webkit-scrollbar {
+		display: none;
+	}
+	
+	.scroll::-webkit-scrollbar-track {
+		display: none;
+	}
+	
+	
+	.scroll::-webkit-scrollbar-thumb {
+		display: none;
+	}
 }
 
 

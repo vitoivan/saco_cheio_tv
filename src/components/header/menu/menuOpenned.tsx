@@ -25,7 +25,10 @@ export const MenuOppennedComponent = ({ openned, setOpenned }: IMenuOpennedCompo
 		<Header className='header'>
 			<Close className='close btn' onClick={() => setOpenned(false)}/>
 			<div className="contacts">
+				{/* eslint-disable-next-line */}
 				<a href="https://www.youtube.com/channel/UCEi4mIXHbqrEGsLoywqKi5g" target="_blank">  <Youtube className='youtube btn'/>  </a>
+
+				{/* eslint-disable-next-line */}
 				<a href="#">  <Telegram className='telegram btn'/>  </a>
 			</div>
 		</Header>
@@ -36,6 +39,7 @@ export const MenuOppennedComponent = ({ openned, setOpenned }: IMenuOpennedCompo
 			</ul>
 		</Body>
 		<Footer> 
+			{/* eslint-disable-next-line */}
 			<a href="#"> <Logout /> <span>Sair</span></a>
 		</Footer>
 	</Container>

@@ -1,5 +1,3 @@
-import React from "react";
-
 export const isVideoPlaying = (video: HTMLVideoElement) => {
 	return !!(video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2);
 }

@@ -71,13 +71,28 @@ const Container = styled.div`
 				margin-left: 1rem;
 			}
 
-		.show-responses {
-			left: 1.5rem;
-			bottom: 2.65rem;
-			font-size: 0.8rem;
+			.show-responses {
+				left: 1.5rem;
+				bottom: 2.65rem;
+				font-size: 0.8rem;
+			}
+	
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+
+		.responses .show-responses {
+			top: -20px;
+			left: 102px;
+			margin-bottom: 2rem;
+		}
+
+		.resposes > li{
+			width: 100%;
+			margin: 0;
 		}
 	
-	}	
 	}
 `
 

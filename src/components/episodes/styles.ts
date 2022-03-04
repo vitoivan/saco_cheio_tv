@@ -125,6 +125,7 @@ export const Container = styled.div`
 					font-size: .8rem;
 					letter-spacing: 0;
 				}
+				
 			}
 			.arrow {
 				right: 1rem;
@@ -145,6 +146,16 @@ export const Container = styled.div`
 				font-size: 1rem;
 				font-weight: bold;	
 			}
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+
+		.header .content {
+			width: 95%;
+		} 
+		.header .content h3{
+			width: calc(100% - 2rem);
 		}
 	}
 `;

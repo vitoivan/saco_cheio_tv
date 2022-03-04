@@ -45,6 +45,19 @@ const Container = styled.div`
 		.comments-empty {
 			margin: 0 0 0 2rem;
 		}
+
+	}
+
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+		margin: 0;
+
+		.responses li {
+			width: 90%;
+			transform: scale(.8);
+			padding: .5rem 0;
+			margin: 0rem 0 0 1rem;
+		}
 	}
 `
 

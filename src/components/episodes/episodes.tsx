@@ -1,10 +1,9 @@
-import React, { Ref } from 'react'
+import React from 'react'
 import { BsChevronDown as ArrowDown } from 'react-icons/bs';
-import { RiContrastDropLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { Episodes } from '../../mocks/entities/Episodes';
 import { Podcast } from '../../mocks/entities/Podcast';
-import { animateOnClick, isBlurred } from './helper';
+import { animateOnClick } from './helper';
 import { Container } from './styles';
 
 

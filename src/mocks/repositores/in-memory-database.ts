@@ -1,4 +1,3 @@
-import { RiContrastDropLine } from "react-icons/ri";
 import { IDatabase, IEpisodeData } from "../database";
 import { Episodes } from "../entities/Episodes";
 import { Podcast } from "../entities/Podcast";

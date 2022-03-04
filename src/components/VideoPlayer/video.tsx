@@ -1,11 +1,9 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
-import { memoryDB } from '../../mocks/repositores/in-memory-database';
 import { Container } from './styles';
-import { getVideoComponent, isVideoPlaying, logoUrl, toggleFullScreen } from './helpers';
+import { getVideoComponent, logoUrl, toggleFullScreen } from './helpers';
 import { ControlsComponent } from './subcomponents/controls/controls';
 import { IEpisodeData } from '../../mocks/database';
-import { IoVideocamOffOutline } from 'react-icons/io5';
 import { IVideoProvider, useVideo } from '../../providers/video-provider';
 
 
@@ -24,15 +22,16 @@ export const VideoPlayer = ({ data }: IVideoPlayerProps ) => {
 	const defaultOldCurrentTime = localStorage.getItem(StorageKeyVideo + `-${data.episode.id}`)
 	
 	const [playing, setPlaying] = React.useState<boolean>(false);
+	// eslint-disable-next-line
 	const [canCount, setCanCount] = React.useState<boolean>(true);
 	const [videoLoading, setVideoLoading] = React.useState<boolean>(false);
 	const [videoError, setVideoError] = React.useState<boolean>(false);
 	const [counter, setCounter] = React.useState<number>(SECONDS_IN_IDLE);
-
+	// eslint-disable-next-line
 	const [oldCurrentTime, setOldCurrentTime] = React.useState<number>(parseInt(defaultOldCurrentTime || '0'));
 	const [vol, setVol] = React.useState<number>(JSON.parse(defaultVol || "0.5"))
 	
-	const { setVideo, video }: IVideoProvider = useVideo();
+	const { setVideo }: IVideoProvider = useVideo();
 
 	const location = useLocation();
 	
@@ -116,6 +115,7 @@ export const VideoPlayer = ({ data }: IVideoPlayerProps ) => {
 		}
 		
 		return () => { clearInterval(hoverInterval) }
+		// eslint-disable-next-line
 	},[location])
 
 	const updateProgressBar = () => {

@@ -4,7 +4,6 @@ import { BsFullscreen } from 'react-icons/bs';
 import { 
     AiFillPlayCircle as PlayButton,
     AiFillPauseCircle as PauseButton,
-    AiFillSound
 } from 'react-icons/ai';
 import {
     MdSkipNext as Next,

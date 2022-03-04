@@ -55,7 +55,7 @@ export const RightWrapperContainer = styled.div`
 		width: 100%;
 		margin: 0 auto;
 		max-width: none;
-
+		
 		.all-eps {
 			width: 100%;
 		}
@@ -63,6 +63,7 @@ export const RightWrapperContainer = styled.div`
 		h2 {
 			font-size: 1.2rem;
 			text-align: center;
+			margin: 0rem 0 1rem 0;
 		}
 
 		.ep {

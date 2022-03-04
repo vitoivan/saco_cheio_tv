@@ -7,7 +7,6 @@ import { memoryDB } from '../mocks/repositores/in-memory-database';
 import { ChatWrapperComponent } from '../components/chat-wrapper/chat-wrapper';
 import { Link } from 'react-router-dom';
 import BreadCrumbComponent from '../components/breadcrumb';
-import { FooterComponent } from '../components/footer/footer';
 import { Container } from './styles/video-screen';
 import { RightAsideComponent } from '../components/video-screen-rigth-aside/rightAside';
 import { DescriptionComponent } from '../components/videoDescription/description';

@@ -39,6 +39,7 @@ export const VideoTimer = () => {
 			output += String(seconds).padStart(2,'0');
 			return output
 		}
+		// eslint-disable-next-line
 		const duration = React.useMemo(() => formatVideoDuration() , [video.readyState]);
 
 		const minutes =  Math.floor(Math.floor(timer) / 60) % 60;
