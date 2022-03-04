@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { AiFillSound } from 'react-icons/ai'
 import { RiVolumeMuteFill } from 'react-icons/ri'
+import { useVideo } from '../../../../providers/video-provider';
 import { getVideoComponent, resize } from '../../helpers';
 import { VolumeContainer } from './styles';
 
@@ -10,8 +11,8 @@ export interface IVolComponent {
 
 export const VolumeComponent = ({ volume }: IVolComponent) => {
 
-	const video = getVideoComponent();
-	const [videoMuted, setVideoMuted] = useState<boolean>(video.muted);
+	const { video } = useVideo();
+	const [videoMuted, setVideoMuted] = useState<boolean>(video.muted || false);
 
 	React.useEffect(() => {
 		
@@ -28,25 +29,27 @@ export const VolumeComponent = ({ volume }: IVolComponent) => {
 		})
 		
 	}, [])
+
+	React.useEffect(() => {
+		video.muted = videoMuted;
+	}, [videoMuted])
 	
-	const muteVideo = () => {
-		const video = getVideoComponent();
-		video.muted = !video.muted;
+	const toggleMuteVideo = () => {
 		setVideoMuted(!video.muted);
 	}
 
-		return (
-	<VolumeContainer volume={volume}>
-		{
-			videoMuted ? (
-				<RiVolumeMuteFill className='sound-off' onClick={() => muteVideo()}/>
-			) : (
-				<AiFillSound className='sound-on' onClick={() => muteVideo()}/>
-			)
-		}
-		<div className="sound-popover" id="sound-popover">
-			<div className="volume-bar" id="volume-bar"></div>
-		</div>
-	</VolumeContainer>	
+	return (
+		<VolumeContainer volume={volume}>
+			{
+				videoMuted ? (
+					<RiVolumeMuteFill className='sound-off' onClick={() => toggleMuteVideo()}/>
+				) : (
+					<AiFillSound className='sound-on' onClick={() => toggleMuteVideo()}/>
+				)
+			}
+			<div className="sound-popover" id="sound-popover">
+				<div className="volume-bar" id="volume-bar"></div>
+			</div>
+		</VolumeContainer>	
 	)
 }
