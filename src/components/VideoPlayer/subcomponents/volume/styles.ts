@@ -10,11 +10,6 @@ export const VolumeContainer = styled.div<IVolComponent>`
 	position: relative;
 	cursor: pointer;
 
-	&:hover .sound-on + .sound-popover {
-		transform: translateX(-50%) scaleY(1);
-		transition: all 300ms;
-	}
-
 	.sound-popover.active {
 		transform: translateX(-50%) scaleY(1);
 		transition: all 300ms;
@@ -62,5 +57,13 @@ export const VolumeContainer = styled.div<IVolComponent>`
 		}};
 		z-index: 1;
 		border-radius: 50px;
+	}
+
+	@media only screen and (min-width: 1365px) {
+		&:hover .sound-on + .sound-popover {
+			transform: translateX(-50%) scaleY(1);
+			transition: all 300ms;
+		}
+
 	}
 `
