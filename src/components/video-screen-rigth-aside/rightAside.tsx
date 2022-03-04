@@ -16,7 +16,7 @@ export const RightAsideComponent = ({ data, id }: RightAsideProps) => {
             {
               data?.podcast.episodes?.map((ep, ind) => {
               return ep.id !== parseInt(id || '0') ? (
-                <a className="ep" key={( ep.id + '-right-wrapper-', ind)} href={`http://localhost:3000/episode/${ep.id}`}>
+                <a className="ep" key={( ep.id + '-right-wrapper-', ind)} href={`/episode/${ep.id}`}>
                     <span>
                       <img src={data.podcast.image} alt="thumb" />
                     </span>
